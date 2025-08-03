@@ -1,0 +1,17 @@
+{
+  "name": "hw6",
+  "version": "1.0.0",
+  "main": "task1.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "moment": "^2.30.1"
+  }
+}

@@ -22,7 +22,7 @@ function displayId(id: string | number):void{
     }
 }
 displayId(10)
-displayId('HI WORLD')
+displayId('hi world')
 
 // Задание 3
 // Объявление и типизация массивов объектов
@@ -33,15 +33,17 @@ displayId('HI WORLD')
 interface Order {
     orderId:string;
     amount:number;
-    status: "pending" | "shipped" | "delivered";
+    status: Status;
 };
+type Status="pending" | "shipped" | "delivered";
+
 const orders: Order[] = [
     { orderId: "A001", amount: 100, status: "pending" },
     { orderId: "A002", amount: 250, status: "shipped" },
     { orderId: "A003", amount: 300, status: "delivered" },
     { orderId: "A004", amount: 150, status: "pending" }
 ];
-function fillterOrderByStatus(orders:Order[], choosenStatus:"pending" | "shipped" | "delivered"):Order[]{
+function fillterOrderByStatus(orders:Order[], choosenStatus:Status):Order[]{
     return orders.filter(order=>order.status === choosenStatus);
 }
 console.log(fillterOrderByStatus(orders, "pending"));
@@ -54,9 +56,9 @@ console.log(fillterOrderByStatus(orders, "pending"));
 // Напишите функцию `updateStock`, которая принимает объект `inventory` 
 // (где ключ — это название товара, а значение — количество на складе) и кортеж `productInfo`, 
 // обновляет количество товара в объекте `inventory` и возвращает обновленный объект.
-let inventory: {[key:string]:number} = { Laptop: 5, Phone: 10 };
+const inventory: {[key:string]:number} = { Laptop: 5, Phone: 10 };
 
-let productInfo: [string, number, number] = ["Laptop", 1200, 3];
+const productInfo: [string, number, number] = ["Laptop", 1200, 3];
 
 function updateStock(product: [string, number, number]){
     const [name, ,quantity] = product;
@@ -64,3 +66,4 @@ function updateStock(product: [string, number, number]){
     return inventory
 }
 console.log(updateStock(productInfo));
+console.log(inventory);

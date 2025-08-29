@@ -39,7 +39,7 @@ console.log(squareNumber(5))
 // Задание 4
 // Типизация функции с boolean
 // Напишите функцию `isEven`, которая принимает число и возвращает `true`, если число четное, и `false`, если нечетное. Используйте строгую типизацию.
-function isEven (a:number):number | boolean{
+function isEven (a:number): boolean{
    return a % 2 === 0? true : false
 }
 console.log(isEven(11))

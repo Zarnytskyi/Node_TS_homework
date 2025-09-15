@@ -6,7 +6,7 @@ const revers = reverseString('hello');
 const capital = capitalize('hello');
 console.log(revers);
 console.log(capital);
-const loan = new Finance.LoanCalculator(100000, 12,10);
+const loan = new Finance.LoanCalculator(100000, 10,2);
 console.log(`Month paymenth:${loan.getMonthlyPayment()}`)
 const tax = new Finance.TaxCalculator(5000,20);
 console.log(`Доход после налогов ${tax.getIncomeAfterTax()}`)
@@ -18,5 +18,5 @@ const admin = new UserManagement.Admin.AdminUser(
 console.log("Текущие права:", admin.getAccess());
 admin.changeAccess("superAdmin");
 console.log("Новые права:", admin.getAccess())
-console.log("Fibonacci до 50:", generateFibonacci(6));
+console.log("Fibonacci до 50:", generateFibonacci(100));
 console.log("Простые числа до 50:", generatePrimeNumbers(50));
